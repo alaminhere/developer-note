@@ -11,15 +11,14 @@ import Button from '@/components/ui/button';
 import TagCard from './tagCard';
 import Search from '@/components/ui/search';
 import clsx from 'clsx';
+import { logOutUser } from '@/actions/auth';
 
-const DashboardLayout = ({ tags, currentUser, logOutUser }) => {
+const DashboardLayout = ({ tags, currentUser }) => {
   const [notes, setNotes] = useState();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const params = useSearchParams();
   const search = params.search;
 
-
-  
   if (!currentUser) {
     redirect('/login');
   }
@@ -107,7 +106,7 @@ const DashboardLayout = ({ tags, currentUser, logOutUser }) => {
           </Link>
         </div>
 
-        <Button onClick={() => logOutUser()} className={'mb-2'}>
+        <Button onClick={async () => await logOutUser()} className={'mb-2'}>
           <LogOut size={16} />
           Logout
         </Button>
