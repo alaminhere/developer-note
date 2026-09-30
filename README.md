@@ -111,7 +111,7 @@ src/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/devnotes.git
+
 ```
 
 ### Navigate to the Project
@@ -163,7 +163,7 @@ NEXTAUTH_URL=http://localhost:3000
 
 ##   Repository
 
-https://github.com/alamin-one/developer-note
+https://github.com/alaminhere/developer-note
 
 ---
 
@@ -171,7 +171,7 @@ https://github.com/alamin-one/developer-note
 
 **Al-Amin**
 
-GitHub: https://github.com/alamin-one
+GitHub: https://github.com/alaminhere
 
 ---
 
