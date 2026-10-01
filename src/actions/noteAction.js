@@ -32,7 +32,6 @@ export const getAllNotes = async (query = {}) => {
 
     filter.userId = user.id;
 
-    // caile amra select:{} use korte partam
     const notes = await prisma.note.findMany({
       where: filter,
       include: { tags: true },
@@ -49,8 +48,6 @@ export const getAllNotes = async (query = {}) => {
 };
 
 export const getNoteById = async id => {
-  // id diye kichu khujar jonno sob ceye  first ucick holo je  findUnique then holo je findFirst
-
   try {
     const note = await prisma.note.findUnique({
       where: {

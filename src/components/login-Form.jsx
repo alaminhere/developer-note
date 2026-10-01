@@ -74,7 +74,7 @@ const LoginForm = () => {
           LOGin
         </Button>
         <p>
-          dont have an account?{' '}
+          “Don’t have an account?{' '}
           <a href="/register" className="text-neo-blue">
             Sign up free
           </a>

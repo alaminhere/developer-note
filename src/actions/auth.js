@@ -50,7 +50,7 @@ export const registerUser = async (prevData, formData) => {
     if (!user) {
       return {
         success: false,
-        message: 'Something went wrong! Plase try again',
+        message: 'Something went wrong! Please try again',
       };
     }
 
@@ -61,17 +61,17 @@ export const registerUser = async (prevData, formData) => {
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       path: '/',
-      maxAge: 60 * 60 * 24 * 7, // 1 week valide
+      maxAge: 60 * 60 * 24 * 7, // 1 week valid
     });
 
     return {
       success: true,
-      message: 'Successfully Registater',
+      message: 'Successfully Register',
     };
   } catch (err) {
     return {
       success: false,
-      message: 'Something went wrong! Plase try again',
+      message: 'Something went wrong! Please try again',
     };
   }
 };
@@ -99,7 +99,7 @@ export const loginUser = async (prevData, formData) => {
     if (!user) {
       return {
         success: false,
-        message: 'User not found! Plase try again',
+        message: 'User not found! Please try again',
       };
     }
 
@@ -117,7 +117,7 @@ export const loginUser = async (prevData, formData) => {
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       path: '/',
-      maxAge: 60 * 60 * 24 * 7, // 1 week valide
+      maxAge: 60 * 60 * 24 * 7, // 1 week valid
     });
 
     return {
@@ -127,7 +127,7 @@ export const loginUser = async (prevData, formData) => {
   } catch (err) {
     return {
       success: false,
-      message: err.message || 'Something went wrong! Plase try again',
+      message: err.message || 'Something went wrong! Please try again',
     };
   }
 };
